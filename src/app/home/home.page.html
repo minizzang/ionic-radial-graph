@@ -8,11 +8,11 @@
       <div id="grey-box" class="flex-row">
         <div class="flex-col flex-start h-100">
           <div>피부 종합 결과</div>
-          <div>2023.12.25</div>
+          <div>{{result.dateMeasured.split('-').join('.')}}</div>
         </div>
         <div class="flex-col h-100">
           <div class="flex-row">
-            <div>여성</div>
+            <div>{{result.gender}}</div>
             <div class="indicator c-user"></div>
           </div>
           <div class="flex-row">
