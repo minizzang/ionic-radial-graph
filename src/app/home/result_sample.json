@@ -1,0 +1,20 @@
+{
+    "dateMeasured": "2023.12.25",
+    "gender": "famale",
+    "resultData": {
+        "hydration": 34,
+        "pore": 46,
+        "melanin": 90,
+        "hemoglobin": 10,
+        "sebum": 10,
+        "wrinkle": 26
+    },
+    "averageData": {
+        "hydration": 50,
+        "pore": 50,
+        "melanin": 50,
+        "hemoglobin": 50,
+        "sebum": 50,
+        "wrinkle": 50
+    }
+}

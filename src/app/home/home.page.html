@@ -1,20 +1,65 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header collapse="condense">
+  <ion-title>피부 진단 결과</ion-title>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content [fullscreen]="true" [scrollY]="null">
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div id="box">
+      <div id="grey-box" class="flex-row">
+        <div class="flex-col flex-start h-100">
+          <div>피부 종합 결과</div>
+          <div>2023.12.25</div>
+        </div>
+        <div class="flex-col h-100">
+          <div class="flex-row">
+            <div>여성</div>
+            <div class="indicator c-user"></div>
+          </div>
+          <div class="flex-row">
+            <div>평균</div>
+            <div class="indicator c-mean"></div>
+          </div>
+        </div>
+      </div>
+      <div id="canvas-container">
+        <div class="flex-col label-top">
+          <div>수분˙탄력</div>
+          <div class="label-circle c-bad">
+            <div>{{result.resultData["hydration"]}}</div>
+            <div>나쁨</div>
+          </div>
+        </div>
+        <div class="flex-col label-mid-left">
+          <div>민감도</div>
+          <div class="label-circle c-good">
+            <div>{{result.resultData["hemoglobin"]}}</div>
+            <div>좋음</div>
+          </div>
+        </div>
+        <div class="flex-col label-mid-right">
+          <div>모공</div>
+          <div class="label-circle c-soso">
+            <div>{{result.resultData["pore"]}}</div>
+            <div>보통</div>
+          </div>
+        </div>
+        <div class="flex-col label-bottom-left">
+          <div class="label-circle c-good">
+            <div>{{result.resultData["melanin"]}}</div>
+            <div>좋음</div>
+          </div>
+          <div>피부톤</div>
+        </div>
+        <div class="flex-col label-bottom-right">
+          <div class="label-circle c-good">
+            <div>{{result.resultData["wrinkle"]}}</div>
+            <div>좋음</div>
+          </div>
+          <div>주름</div>
+        </div>
+        <canvas #chartCanvas></canvas>
+      </div>
+    </div>
+    <button>완료</button>
   </div>
 </ion-content>
