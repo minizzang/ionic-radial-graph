@@ -1,0 +1,7 @@
+{
+  "name": "graph-page",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
